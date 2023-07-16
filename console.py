@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Implements an entry point for the command line interpreter"""
 import cmd
 from models.base_model import BaseModel
 from models import storage
@@ -9,14 +10,17 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
-"""Implements an entry point for the command line interpreter"""
 
-
-class_names = ["BaseModel"]
+class_names = ["BaseModel", "User", "State", "City", "Place", "Amenity", \
+                "Review"]
 
 
 class HBNBCommand(cmd.Cmd):
-    """Uses the cmd module to implement a command interpreter."""
+    """Uses the cmd module to implement a command interpreter.
+
+    Attributes:
+        prompt(str): a custom prompt.
+    """
 
     prompt = "(hbnb) "
 
