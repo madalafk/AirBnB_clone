@@ -4,9 +4,9 @@
 Unittest classes:
     class TestUser
 """
-
 import unittest
 from models.user import User
+
 
 class TestUser(unittest.TestCase):
     def test_email_initialization(self):
@@ -45,6 +45,6 @@ class TestUser(unittest.TestCase):
         user.last_name = "SWE"
         self.assertEqual(user.last_name, "ALX")
 
+
 if __name__ == '__main__':
     unittest.main()
-

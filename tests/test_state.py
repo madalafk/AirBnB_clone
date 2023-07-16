@@ -4,9 +4,9 @@
 Unittest classes:
     class TestState
 """
-
 import unittest
 from models.state import State
+
 
 class TestState(unittest.TestCase):
     def test_name_initialization(self):
@@ -17,6 +17,7 @@ class TestState(unittest.TestCase):
         state = State()
         state.name = "New Mexico"
         self.assertEqual(state.name, "New Mexico")
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -4,9 +4,9 @@
 Unittest classes:
     class TestPlace
 """
-
 import unittest
 from models.place import Place
+
 
 class TestPlace(unittest.TestCase):
     def test_city_id_initialization(self):
@@ -53,6 +53,6 @@ class TestPlace(unittest.TestCase):
         place = Place()
         self.assertEqual(place.amenity_ids, [])
 
+
 if __name__ == '__main__':
     unittest.main()
-

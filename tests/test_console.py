@@ -3,9 +3,7 @@
 
 Unittest classes:
    class TestHBNBCommand
- 
 """
-
 import unittest
 from unittest.mock import patch
 from io import StringIO
@@ -39,7 +37,7 @@ class TestHBNBCommand(unittest.TestCase):
             self.console.do_quit(None)
             output = fake_out.getvalue().strip()
             self.assertEqual(output, "")
-    
+
     def test_do_create(self):
         with patch('sys.stdout', new=StringIO()) as fake_out:
             self.console.do_create("BaseModel")
@@ -100,10 +98,10 @@ class TestHBNBCommand(unittest.TestCase):
             obj_id = obj.id
             storage.all()[f"BaseModel.{obj_id}"] = obj
 
-            self.console.do_update("BaseModel " + obj_id + " attr_name attr_value")
+            self.console.do_update("BaseModel " + obj_id +
+                                   " attr_name attr_value")
             self.assertEqual(getattr(obj, "attr_name"), "attr_value")
 
 
 if __name__ == '__main__':
     unittest.main()
-

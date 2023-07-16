@@ -25,7 +25,8 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(self.base_model.updated_at, datetime)
 
     def test_string_representation(self):
-        expected_output = "[BaseModel] ({}) {}".format(self.base_model.id, self.base_model.__dict__)
+        expected_output = "[BaseModel] ({}) {}".format(self.base_model.id, self
+                                                       .base_model.__dict__)
         self.assertEqual(str(self.base_model), expected_output)
 
     def test_save_updates_timestamp(self):
@@ -42,8 +43,10 @@ class TestBaseModel(unittest.TestCase):
         base_model_dict = self.base_model.to_dict()
 
         self.assertEqual(base_model_dict["id"], self.base_model.id)
-        self.assertEqual(base_model_dict["created_at"], self.base_model.created_at.isoformat())
-        self.assertEqual(base_model_dict["updated_at"], self.base_model.updated_at.isoformat())
+        self.assertEqual(base_model_dict["created_at"],
+                         self.base_model.created_at.isoformat())
+        self.assertEqual(base_model_dict["updated_at"],
+                         self.base_model.updated_at.isoformat())
         self.assertEqual(base_model_dict["__class__"], "BaseModel")
 
     def test_to_dict_excludes_methods(self):
@@ -56,4 +59,3 @@ class TestBaseModel(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

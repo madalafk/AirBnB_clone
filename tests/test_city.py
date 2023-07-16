@@ -4,9 +4,9 @@
 Unittest classes:
     class TestCity
 """
-
 import unittest
 from models.city import City
+
 
 class TestCity(unittest.TestCase):
     def test_state_id_initialization(self):
@@ -27,6 +27,6 @@ class TestCity(unittest.TestCase):
         city.name = "New York"
         self.assertEqual(city.name, "New York")
 
+
 if __name__ == '__main__':
     unittest.main()
-
