@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""unittests for models/amenity.py.
+
+Unittest classes:
+    TestAmenity
+    
+"""
+
 import unittest
 from models.amenity import Amenity
 
