@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""a unittests for models/city.py.
+""" unittests for models/city.py.
 
 Unittest classes:
-    test_state_id_initialization
-    test_name_initialization
-    test_state_id_assignment
-    test_name_assignment
+    class TestCity
 """
 
 import unittest
