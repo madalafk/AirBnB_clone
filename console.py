@@ -11,8 +11,8 @@ from models.place import Place
 from models.review import Review
 
 
-class_names = ["BaseModel", "User", "State", "City", "Place", "Amenity", \
-                "Review"]
+class_names = ["BaseModel", "User", "State", "City", "Place", "Amenity",
+               "Review"]
 
 
 class HBNBCommand(cmd.Cmd):
