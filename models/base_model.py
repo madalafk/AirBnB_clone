@@ -1,14 +1,18 @@
 #!/usr/bin/python3
+"""Defines a base class for all other classes"""
 from uuid import uuid4
 from datetime import datetime
 import models
-"""."""
 
 
 class BaseModel:
-    """defines all common attributes/methods for other classes.
+    """Represents all common attributes/methods for other classes.
 
+    Args:
+        *args(any): unused
+        **kwargs(dict): k-v pairs of attributes and respective values.
     """
+
     def __init__(self, *args, **kwargs):
         self.id = str(uuid4())
         self.created_at = datetime.now()
