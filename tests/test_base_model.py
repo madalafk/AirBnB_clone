@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """a unittests for models/base_model.py.
+Unittest classes:
+    TestBaseModel
 """
 
 import unittest
