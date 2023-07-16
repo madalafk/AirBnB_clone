@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Implements serialization and deserialization of objects"""
 import json
 from os.path import exists
 from models.base_model import BaseModel
@@ -8,7 +9,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-"""Implements serialization and deserialization of objects"""
 
 
 class FileStorage:
